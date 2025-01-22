@@ -2,20 +2,20 @@ import React from 'react'
 
 function Team() {
   return (
-    <section className="bg-cover bg-no-repeat bg-[url('/backgrounds/sl1.jpg')] bg-gray-400 bg-blend-multiply">
+    <section className="bg-cover bg-no-repeat bg-[url('/backgrounds/h4.jpeg')] bg-gray-400 bg-blend-multiply pb-12">
 
-        <div className="p-4 font-[sans-serif] py-16 ">
+        <div className="p-4 font-[sans-serif] pt-16 pb-6 ">
             <div className="max-w-4xl mx-auto relative bg-[#173567] bg-opacity-60 border border-[#173567] p-8">
                 <div className="text-center">
-                    <h2 className="text-gray-300 text-2xl font-bold">MEET OUR TEAM</h2>
+                    <h2 className="text-gray-300 text-2xl font-bold">NOTRE ÉQUIPE</h2>
                 </div>
 
                 <div className="max-w-xl mt-9 mx-auto">
                     <div className="flex flex-col items-center text-center">
-                        <img src="/team/t1.png" className="w-52 h-52 rounded-full shadow-[0_2px_22px_-4px_rgba(93,96,127,0.6)] border-2 border-white" />
+                        <img src="/team/t2.jpeg" className="w-52 rounded-full shadow-[0_2px_22px_-4px_rgba(93,96,127,0.6)] border-2 border-white" />
                         <div className="mt-4">
                             <h4 className="text-gray-200 text-base font-bold">MUSAFIRI BAFUNIYEMBAKA</h4>
-                            <p className="text-xs text-gray-400 mt-1">Consultant, Samu Properties</p>
+                            <p className="text-xs text-gray-400 mt-1">Consultant, Immobilier</p>
                         </div>
                     </div>
                 </div>
@@ -32,6 +32,50 @@ function Team() {
                 </div>
             </div>
         </div>
+
+        <div className="p-4 font-[sans-serif] pt-6">
+            <div className="font-[sans-serif] bg-black bg-opacity-45 border border-gray-800 mx-auto max-w-4xl text-center py-8">
+                <div className='mb-6 sm:mb-8'>
+                    <h2 className="text-xl sm:text-3xl font-extrabold text-gray-300">Zones Populaires</h2>
+                    <p className="text-lg text-gray-400">Découvrir Dubaï</p>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 px-10">
+                    
+                    <div className="group overflow-hidden cursor-pointer relative">
+                        <div className="bg-gray-100 w-full overflow-hidden">
+                            <img src="/properties/p1.jpg" alt="Product 1"
+                            className="aspect-[3/4] w-full object-cover object-top hover:scale-110 transition-all duration-700" />
+                        </div>
+
+                        <div className="p-4 relative">
+                            <div className="z-20 relative">
+                                <h6 className="text-sm font-semibold text-gray-200 truncate">Palm Jumeirah</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="group overflow-hidden cursor-pointer relative">
+                        <div className="bg-gray-100 w-full overflow-hidden">
+                            <img src="/properties/p5.jpg" alt="Product 1"
+                            className="aspect-[3/4] w-full object-cover object-top hover:scale-110 transition-all duration-700" />
+                        </div>
+
+                        <div className="p-4 relative">
+                            <div className="z-20 relative">
+                                <h6 className="text-sm font-semibold text-gray-200 truncate">Palm Jumeirah</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-slate-300 rounded-lg bg-[#173567] w-1/2 mt-6">
+                    En Savoir Plus
+                </a>
+            </div>
+        </div>
+
     </section>
   )
 }

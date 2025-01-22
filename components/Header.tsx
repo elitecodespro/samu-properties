@@ -1,5 +1,4 @@
 import { Phone } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { BsWhatsapp } from 'react-icons/bs'
@@ -9,7 +8,7 @@ function Header() {
     <nav className="bg-[#173567] fixed w-full z-20 top-0 start-0 border-b border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Image src={'/logos/lg-1.png'} alt='Samu Properties Logo' width={40} height={60} className="h-8" />
+            <img src={'/logos/lg-1.png'} alt='Samu Properties Logo' className="h-8" />
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <BsWhatsapp className='text-slate-300 text-center mx-6 my-2 text-2xl' />
