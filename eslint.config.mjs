@@ -14,7 +14,10 @@ const eslintConfig = [
     extends: ["next/core-web-vitals", "next/typescript"],
     rules: {
       "@typescript-eslint/no-unused-vars": "off",
-      "react/no-unescaped-entities": 0
+      "react/no-unescaped-entities": 0,
+      "@typescript-eslint/no-empty-object-type": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-namespace": "off",
     }
   })
 ];
