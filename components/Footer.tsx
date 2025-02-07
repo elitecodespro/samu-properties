@@ -1,8 +1,15 @@
+"use client"
+
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 import React from 'react'
 
 function Footer() {
+    const { width } : any = useWindowDimensions();
+
+    const imgy = width && width > 640 ? '/backgrounds/desks/d6.png' : '/backgrounds/h3.jpeg';
+
   return (
-    <footer className="bg-cover bg-no-repeat bg-[url('/backgrounds/h3.jpeg')] bg-gray-400 bg-blend-multiply">
+    <footer className="bg-cover bg-no-repeat bg-gray-400 md:bg-gray-50 bg-blend-multiply" style={{backgroundImage: "url(" + imgy + ")"}}>
         <div className="p-4 font-[sans-serif] py-16 ">
             <div className="max-w-screen-xl mx-auto bg-black bg-opacity-60 border border-gray-800 p-8">
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">

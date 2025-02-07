@@ -1,17 +1,27 @@
 import AdminSidebar from '@/components/admin/AdminSidebar'
-import React from 'react'
+import { ThemeProvider } from '@/components/theme-provider'
+import React, { Suspense, useEffect, useState } from 'react'
 
 interface Props {
-    children: React.ReactNode
+  children: React.ReactNode
 }
 
 const AdminLayout = ({ children }: Props) => {
   return (
-    <main className="mx-auto w-full relative">
-        <AdminSidebar>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <main className="mx-auto w-full relative">
+        <AdminSidebar>  
+          <Suspense fallback={null}>
             {children}
+          </Suspense>
         </AdminSidebar>
-    </main>
+      </main>
+    </ThemeProvider>
   )
 }
 

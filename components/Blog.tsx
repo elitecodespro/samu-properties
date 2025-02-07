@@ -1,13 +1,19 @@
+"use client"
+
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 import React from 'react'
 
-function Blog() {
+function Blog({setting} : any) {
+    const { width } : any = useWindowDimensions();
+
+    const imgy = width && width > 640 ? '/backgrounds/desks/d5.png' : setting.blogsSectionBackgroundImage;
   return (
-    <section className="bg-cover bg-no-repeat bg-[url('/backgrounds/h2.jpeg')] bg-gray-400 bg-blend-multiply pt-10">
+    <section className="bg-cover bg-no-repeat bg-gray-400 md:bg-gray-50 bg-blend-multiply pt-10" style={{backgroundImage: "url(" + imgy + ")"}}>
         <div className="p-4 font-[sans-serif] pt-8 pb-16 ">
             <div className="font-[sans-serif] bg-black bg-opacity-45 border border-gray-800 mx-auto max-w-4xl text-center py-8">
                 <div className='mb-6 sm:mb-8'>
-                    <h2 className="text-xl sm:text-3xl font-extrabold text-gray-300">Blogs Récents</h2>
-                    <p className="text-lg text-gray-400">Mises à Jour Des Actualités</p>
+                    <h2 className="text-xl sm:text-3xl font-extrabold text-gray-300">{setting.blogsSectionTitle}</h2>
+                    <p className="text-lg text-gray-400">{setting.blogsSectionSubTitle}</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-sm:gap-8 px-10">
